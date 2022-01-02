@@ -36,15 +36,17 @@ console.log('5. Adding 25 to supplyChanges.', supplyChanges);
 
 console.log('6. Showing supplyChanges...');
 
-let newSupplychanges = [ 3, 5, 7, 11, 0,-6 ]
-for ( let i=0; i<4; i++)
-console.log('added', newSupplychanges [ i ], 'parts' );
+for (let i = 0; i < supplyChanges.length; i++) {
+  if ( supplyChanges[i] > 0 ) {
+    console.log('added', supplyChanges[i], 'parts');
+  } else if ( supplyChanges[i] < 0 ) {
+    console.log( 'removed', supplyChanges[i], 'parts' ); }
+    else {
+   console.log( 'no change');
+ }
+  }
 
-for ( let i=4; i<5; i++ )
-console.log('No change');
 
-for ( let i=5; i<6; i++)
-console.log('Removed', newSupplychanges [ i ], 'parts' );
 
 
 // STRETCH GOALS
